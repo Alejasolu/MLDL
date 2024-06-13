@@ -331,7 +331,7 @@ class FeatureEncoder(nn.Module):
         )
 
     def forward(self, x, mask=None):
-        #features = x + self.pos_embedding(x)  # (batch_size, seq_len, dim) """------------------------------------------------------------------------------------------------------------------------------"
+        features = x + self.pos_embedding(x)  # (batch_size, seq_len, dim) """------------------------------------------------------------------------------------------------------------------------------"
         features = self.conv_block(features)  # (batch_size, seq_len, dim)
         features = self.attention_block(
             features, mask=mask
