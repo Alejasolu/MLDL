@@ -65,13 +65,13 @@ def read_command_line():
         default=50,
         help="character dimension, set to 100 for activitynet",
     )
-    """parser.add_argument("--dim", type=int, default=128, help="hidden size")
+    parser.add_argument("--dim", type=int, default=128, help="hidden size")
     parser.add_argument(
         "--highlight_lambda",
         type=float,
         default=5.0,
         help="lambda for highlight region",
-    )"""
+    )
     parser.add_argument("--num_heads", type=int, default=8, help="number of heads")
     parser.add_argument("--drop_rate", type=float, default=0.2, help="dropout rate")
     parser.add_argument(
@@ -95,9 +95,9 @@ def read_command_line():
     parser.add_argument(
         "--warmup_proportion", type=float, default=0.0, help="warmup proportion"
     )
-    """parser.add_argument(
+    parser.add_argument(
         "--extend", type=float, default=0.1, help="highlight region extension"
-    )"""
+    )
     parser.add_argument(
         "--period", type=int, default=100, help="training loss print period"
     )

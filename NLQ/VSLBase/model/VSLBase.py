@@ -127,7 +127,7 @@ class VSLBase(nn.Module):
         query_features = self.feature_encoder(query_features, mask=q_mask)
         video_features = self.feature_encoder(video_features, mask=v_mask)
         features = self.cq_attention(video_features, query_features, v_mask, q_mask)
-        features = self.cq_concat(features, query_features, q_mask).unsqueeze(2) #Added the unsqueeze to leave it in the same axis
+        features = self.cq_concat(features, query_features, q_mask)
         """Conection of the highllight layer"""
         #h_score = self.highlight_layer(features, v_mask) 
         #features = features * h_score.unsqueeze(2) #Here is beeing calculated the Query Guided Highlighter 
