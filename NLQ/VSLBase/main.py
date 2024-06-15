@@ -126,7 +126,7 @@ def main(configs, parser):
                     char_ids,
                     s_labels,
                     e_labels,
-                    #h_labels,
+                    h_labels, # se podría borrar 
                 ) = data
                 # prepare features
                 vfeats, vfeat_lens = vfeats.to(device), vfeat_lens.to(device)
