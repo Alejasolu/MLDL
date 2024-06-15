@@ -164,7 +164,8 @@ def main(configs, parser):
                 loc_loss = model.compute_loss(
                     start_logits, end_logits, s_labels, e_labels
                 )
-                total_loss = loc_loss + configs.highlight_lambda * highlight_loss
+                total_loss = loc_loss 
+                """+ configs.highlight_lambda * highlight_loss"""
                 # compute and apply gradients
                 optimizer.zero_grad()
                 total_loss.backward()
