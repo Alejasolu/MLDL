@@ -118,6 +118,7 @@ def main(configs, parser):
                 desc="Epoch %3d / %3d" % (epoch + 1, configs.epochs),
             ):
                 global_step += 1
+                print(data)
                 (
                     _,
                     vfeats,
