@@ -11,7 +11,7 @@ from model.layers import (
     CQConcatenate,
     CQAttention,
     ConditionedPredictor,
-    #HighLightLayer,
+    HighLightLayer,
     BertEmbedding,
 )
 
