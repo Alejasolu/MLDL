@@ -154,7 +154,8 @@ def main(configs, parser):
                 # generate mask
                 video_mask = convert_length_to_mask(vfeat_lens).to(device)
                 # compute logits
-                h_score, start_logits, end_logits = model(
+                #h_score, 
+                start_logits, end_logits = model(
                     word_ids, char_ids, vfeats, video_mask, query_mask
                 )
                 # compute loss
