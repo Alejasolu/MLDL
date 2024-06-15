@@ -331,7 +331,7 @@ class FeatureEncoder(nn.Module):
         )
 
     def forward(self, x, mask=None):
-        features = x + self.pos_embedding(x)  # (batch_size, seq_len, dim) """------------------------------------------------------------------------------------------------------------------------------"
+        features = x + self.pos_embedding(x)  # (batch_size, seq_len, dim)
         features = self.conv_block(features)  # (batch_size, seq_len, dim)
         features = self.attention_block(
             features, mask=mask
@@ -431,7 +431,7 @@ class CQConcatenate(nn.Module):
         output = self.conv1d(output)
         return output
 
-"""Query-Guided Highlighting
+
 class HighLightLayer(nn.Module):
     def __init__(self, dim):
         super(HighLightLayer, self).__init__()
@@ -457,7 +457,7 @@ class HighLightLayer(nn.Module):
         mask = mask.type(torch.float32)
         loss = torch.sum(loss_per_location * mask) / (torch.sum(mask) + epsilon)
         return loss
-"""
+
 
 class DynamicRNN(nn.Module):
     def __init__(self, dim):
